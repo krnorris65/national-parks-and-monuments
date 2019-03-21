@@ -1,6 +1,7 @@
 {
   "parks": [
     {
+      "id": 1,
       "name": "Jackson Hole",
       "state": "WY",
       "latitude": 43.582767,
@@ -8,6 +9,7 @@
       "visited": false
     },
     {
+      "id": 2,
       "name": "Mojave National Preserve",
       "state": "CA",
       "latitude": 35.141689,
@@ -15,6 +17,7 @@
       "visited": true
     },
     {
+      "id": 3,
       "name": "Joshua Tree National Park",
       "state": "CA",
       "latitude": 33.881866,
@@ -22,6 +25,7 @@
       "visited": true
     },
     {
+      "id": 4,
       "name": "Yellowstone National Park",
       "state": "WY",
       "latitude": 44.427895,
@@ -29,6 +33,7 @@
       "visited": true
     },
     {
+      "id": 5,
       "name": "Great Smoky Mountains National Park",
       "state": "TN",
       "latitude": 35.611763,
@@ -36,6 +41,7 @@
       "visited": false
     },
     {
+      "id": 6,
       "name": "Little Sandy National Wildlife Refuge",
       "state": "TX",
       "latitude": 32.590797,
@@ -43,6 +49,7 @@
       "visited": false
     },
     {
+      "id": 7,
       "name": "Mount Rainier National Park",
       "state": "WA",
       "latitude": 46.879967,
@@ -50,6 +57,7 @@
       "visited": true
     },
     {
+      "id": 8,
       "name": "Yosemite National Park",
       "state": "CA",
       "latitude": 37.865101,
@@ -57,6 +65,7 @@
       "visited": true
     },
     {
+      "id": 9,
       "name": "Gates of the Arctic National Park and Preserve",
       "state": "AK",
       "latitude": 67.915199,
@@ -64,8 +73,9 @@
       "visited": false
     },
     {
+      "id": 10,
       "name": "Haleakalā National Park",
-      "state": "TX",
+      "state": "HI",
       "latitude": 20.701283,
       "longitude": -156.173325,
       "visited": false
@@ -73,6 +83,7 @@
   ],
   "monuments": [
     {
+      "id": 1,
       "name": "Chimney Rock",
       "state": "CO",
       "area": 4724,
@@ -80,6 +91,7 @@
       "visited": false
     },
     {
+      "id": 2,
       "name": "Devils Tower",
       "state": "WY",
       "area": 1347.21,
@@ -87,6 +99,7 @@
       "visited": false
     },
     {
+      "id": 3,
       "name": "Giant Sequoia",
       "state": "CA",
       "area": 352626,
@@ -94,6 +107,7 @@
       "visited": true
     },
     {
+      "id": 4,
       "name": "Gold Butte",
       "state": "NV",
       "area": 296937,
@@ -101,6 +115,7 @@
       "visited": true
     },
     {
+      "id": 5,
       "name": "Harriet Tubman Underground Railroad",
       "state": "MD",
       "area": 480,
@@ -108,6 +123,7 @@
       "visited": false
     },
     {
+      "id": 6,
       "name": "Marianas Trench Marine",
       "state": "Northern Mariana Islands, Guam",
       "area": 61077668,
@@ -115,6 +131,7 @@
       "visited": false
     },
     {
+      "id": 7,
       "name": "Misty Fjords",
       "state": "AK",
       "area": 2294072,
@@ -122,6 +139,7 @@
       "visited": false
     },
     {
+      "id": 8,
       "name": "Mount St. Helens",
       "state": "WA",
       "area": 113205,
@@ -129,6 +147,7 @@
       "visited": false
     },
     {
+      "id": 9,
       "name": "Natural Bridges",
       "state": "UT",
       "area": 7636.49,
@@ -136,6 +155,7 @@
       "visited": false
     },
     {
+      "id": 10,
       "name": "Navajo",
       "state": "AZ",
       "area": 360,

@@ -8,7 +8,7 @@ const buildParkHtml = parkObject => {
   parkArticle.appendChild(buildElement("h3", undefined, parkObject.name));
   parkArticle.appendChild(buildElement("p", undefined, parkObject.state));
 
-  let deleteParkButton = buildElement("button", undefined, "Delete Park")
+  let deleteParkButton = buildElement("button", `delete-park--${parkObject.id}`, "Delete Park")
   parkArticle.appendChild(deleteParkButton);
   deleteParkButton.addEventListener("click", handleDelete)
   return parkArticle;
