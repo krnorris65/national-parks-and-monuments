@@ -28,36 +28,31 @@ const parkEditForm = (editPark) => {
     let editFormFrag = document.createDocumentFragment();
 
     editFormFrag.appendChild(buildElement("label", undefined, "Name: "))
-    const nameInput = buildElement("input", `edit-park-name--${editPark.id}`)
+    const nameInput = editFormFrag.appendChild(buildElement("input", `edit-park-name--${editPark.id}`))
     nameInput.value = editPark.name
-    editFormFrag.appendChild(nameInput)
 
     editFormFrag.appendChild(buildElement("label", undefined, "State: "))
-    const stateInput = buildElement("input", `edit-park-state--${editPark.id}`)
+    const stateInput = editFormFrag.appendChild(buildElement("input", `edit-park-state--${editPark.id}`))
     stateInput.value = editPark.state
-    editFormFrag.appendChild(stateInput)
 
     editFormFrag.appendChild(buildElement("label", undefined, "Latitude: "))
-    const latitudeInput = buildElement("input", `edit-park-latitude--${editPark.id}`)
+    const latitudeInput = editFormFrag.appendChild(buildElement("input", `edit-park-latitude--${editPark.id}`))
     latitudeInput.value = editPark.latitude
-    editFormFrag.appendChild(latitudeInput)
 
     editFormFrag.appendChild(buildElement("label", undefined, "Longitude: "))
-    const longitudeInput = buildElement("input", `edit-park-longitude--${editPark.id}`)
+    const longitudeInput = editFormFrag.appendChild(buildElement("input", `edit-park-longitude--${editPark.id}`))
     longitudeInput.value = editPark.longitude
-    editFormFrag.appendChild(longitudeInput)
 
     editFormFrag.appendChild(buildElement("label", undefined, "Visited: "))
-    const visitedInputTrue = buildElement("input", `edit-park-visited--${editPark.id}`)
+    const visitedInputTrue = editFormFrag.appendChild(buildElement("input", `edit-park-visited--${editPark.id}`))
     visitedInputTrue.type = "radio"
     visitedInputTrue.name = "visited"
-    editFormFrag.appendChild(visitedInputTrue)
+
 
     editFormFrag.appendChild(buildElement("label", undefined, "Not Visited: "))
-    const visitedInputFalse = buildElement("input")
+    const visitedInputFalse = editFormFrag.appendChild(buildElement("input"))
     visitedInputFalse.type = "radio"
     visitedInputFalse.name = "visited"
-    editFormFrag.appendChild(visitedInputFalse)
 
     if (editPark.visited) {
         visitedInputTrue.checked = true
@@ -66,9 +61,8 @@ const parkEditForm = (editPark) => {
     }
 
 
-    const updateParkButton = buildElement("button", undefined, "Update")
+    const updateParkButton = editFormFrag.appendChild(buildElement("button", undefined, "Update"))
     updateParkButton.addEventListener("click", handleUpdate)
-    editFormFrag.appendChild(updateParkButton)
 
     return editFormFrag
 
