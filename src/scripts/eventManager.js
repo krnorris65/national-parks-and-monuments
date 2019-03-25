@@ -1,56 +1,56 @@
 const handleDelete = () => {
-  console.log(
-    "delete button clicked",
-    event.target.parentNode.id.split("--")[1]
-  );
-  let parkId = event.target.parentNode.id.split("--")[1];
+    console.log("delete button clicked", event.target.parentNode.id.split("--")[1]);
+    let parkId = event.target.parentNode.id.split("--")[1];
 
-  deletePark(parkId).then(() => listNationalParks());
+    deletePark(parkId)
+        .then(() => listNationalParks())
 };
 
 const handleVisited = () => {
-  console.log(
-    "visited button clicked",
-    event.target.parentNode.id.split("--")[1]
-  );
-  let parkId = event.target.parentNode.id.split("--")[1];
+    console.log("visited button clicked", event.target.parentNode.id.split("--")[1]);
+    let parkId = event.target.parentNode.id.split("--")[1];
 
-  let visitedParkObject = {
-    visited: true
-  };
+    let visitedParkObject = {
+        visited: true
+    }
 
-  patchPark(parkId, visitedParkObject).then(() => listNationalParks());
-};
+    patchPark(parkId, visitedParkObject)
+        .then(() => listNationalParks())
+}
 
 const handleEdit = () => {
-  console.log("edit button clicked", event.target.parentNode.id.split("--")[1]);
-  let parkId = event.target.parentNode.id.split("--")[1];
+    console.log("edit button clicked", event.target.parentNode.id.split("--")[1]);
+    let parkId = event.target.parentNode.id.split("--")[1];
 
-  const parkArticle = document.querySelector(`#national-park--${parkId}`);
-  clearElement(parkArticle);
+    const parkArticle = document.querySelector(`#national-park--${parkId}`)
+    clearElement(parkArticle)
 
-  getPark(parkId).then(parkToEdit => {
-    const editFormForPark = parkEditForm(parkToEdit);
-    parkArticle.appendChild(editFormForPark);
-  });
-};
+    getPark(parkId)
+        .then(parkToEdit => {
+            const editFormPark = parkEditForm(parkToEdit)
+            parkArticle.appendChild(editFormPark)
+        })
+
+
+}
 
 const handleUpdate = () => {
-  console.log(
-    "update button clicked",
-    event.target.parentNode.id.split("--")[1]
-  );
-  let parkId = event.target.parentNode.id.split("--")[1];
+    let parkId = event.target.parentNode.id.split("--")[1];
 
-  const editedParkName = document.querySelector(`#edit-park-name--${parkId}`);
-  const editedParkState = document.querySelector(`#edit-park-state--${parkId}`);
+    let editedParkName = document.getElementById(`edit-park-name--${parkId}`).value
+    let editedParkState = document.getElementById(`edit-park-state--${parkId}`).value
+    let editedParkLatitude = document.getElementById(`edit-park-latitude--${parkId}`).value
+    let editedParkLongitude = document.getElementById(`edit-park-longitude--${parkId}`).value
+    let editedParkVisited = document.getElementById(`edit-park-visited--${parkId}`).checked
 
-  console.log(editedParkName.value, editedParkState.value);
+    let editedParkObj = {
+        name: editedParkName,
+        state: editedParkState,
+        latitude: editedParkLatitude,
+        longitude: editedParkLongitude,
+        visited: editedParkVisited
+    }
+    putPark(parkId, editedParkObj)
+    .then(() => listNationalParks())
 
-  let editedPark = {
-    name: editedParkName.value,
-    state: editedParkState.value
-  };
-
-  putPark(parkId, editedPark).then(() => listNationalParks());
-};
+}
